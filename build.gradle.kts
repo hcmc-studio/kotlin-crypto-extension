@@ -21,7 +21,13 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "studio.hcmc"
-            artifactId = "kotlin-crypto-extension"
+            artifactId = project.name
+            version = project_version
+            from(components["java"])
+        }
+        create<MavenPublication>("jitpack") {
+            groupId = "com.github.hcmc-studio"
+            artifactId = project.name
             version = project_version
             from(components["java"])
         }
