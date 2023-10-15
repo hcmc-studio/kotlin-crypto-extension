@@ -40,7 +40,7 @@ fun RSA.createKeyPair(keySize: Int): RSA.KeyPair {
     }
     return RSA.KeyPair(
         publicKey = keyPair.public.encoded.toKeyString(),
-        privateKey = keyPair.private.encoded.toString()
+        privateKey = keyPair.private.encoded.toKeyString()
     )
 }
 
